@@ -13,7 +13,7 @@ impl Todo {
         Self { tasks: Vec::new() }
     }
 
-    pub(crate) fn load(file_path: &str) -> Self {
+    pub fn load(file_path: &str) -> Self {
         match read_to_string(file_path) {
             Ok(data) => serde_json::from_str(&data).unwrap_or_else(|_| Self::new()),
             Err(_) => Self::new(),
