@@ -5,8 +5,11 @@ Commands:
 add :
 cargo run -- add "task"
 
+delete :
+cargo run -- delete {taskNumber}
+
 list :
 cargo run -- list
 
 done :
-cargo run -- done "task number"
+cargo run -- done {taskNumber}
